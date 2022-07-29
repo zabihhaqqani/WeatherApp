@@ -9,6 +9,7 @@ const input = document.querySelector('#input')
 const output = document.querySelector("#output")
 
 button.addEventListener("click", function () {
+    output.innerText = "getting your data..................."
     fetch(inputHandler())
         .then(resp => resp.json())
         .then(data => {
