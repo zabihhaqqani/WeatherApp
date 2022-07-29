@@ -12,10 +12,12 @@ button.addEventListener("click", function () {
         .then(data => {
             console.log(data)
             output.innerHTML =
-                `<li class="data">Temp: ${data.current.temp_c}C</li>
-            <li class="data">Location: ${data.location.name}</li>
-             <li class="data">Humidity: ${data.current.humidity} </li>
-             <li class="data">Local Date and Time: ${data.location.localtime}</li>`
+                `<li class="data">${data.current.condition.text}  
+                 <img class="icon" src="${data.current.condition.icon}" alt="img"></li>
+                <li class="data">Temperature: ${data.current.temp_c} &#8451</li>
+                <li class="data">Location: ${data.location.name}</li>
+                <li class="data">Humidity: ${data.current.humidity} </li>
+                <li class="data">Local Date and Time: ${data.location.localtime}</li>`
 
         })
 })
