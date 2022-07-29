@@ -1,4 +1,6 @@
-let url = "http://api.weatherapi.com/v1/current.json?key=d5a1ecd6ae68420fbc3193729222807&q="
+let url = "http://api.weatherapi.com/v1/current.json?key="
+
+let key = "d5a1ecd6ae68420fbc3193729222807&q="
 
 const button = document.querySelector('#btn')
 
@@ -24,5 +26,5 @@ button.addEventListener("click", function () {
 
 function inputHandler(inputValue) {
     inputValue = input.value
-    return url + inputValue + "&aqi=yes"
+    return url + key+ inputValue + "&aqi=yes"
 }
